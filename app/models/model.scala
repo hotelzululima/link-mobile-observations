@@ -57,14 +57,14 @@ object Response {
 
   def build(list: List[Observation], means: List[(Observation, Int)]) = {
     val l = Try{
-      list.sortWith(_.ts > _.ts ).take(1000)
+      list.sortWith(_.ts > _.ts )
     } match {
-      case Success(list) => list
+      case Success(filtered) => filtered
       case Failure(_) =>
         println(list.take(1))
         list
     }
 
-    Response(l.take(1000), means, list.size, list.groupBy(_.id.value).mapValues(_.size), list.groupBy(_.id.`type`).mapValues(_.size))
+    Response(l.take(200), means, list.size, list.groupBy(_.id.value).mapValues(_.size), list.groupBy(_.id.`type`).mapValues(_.size))
   }
 }
