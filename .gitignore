@@ -8,4 +8,5 @@ dynamodb-local/
 *.sc
 ui/app/dist
 ui/node_modules
+ui/package-lock.json
 npm-debug.log

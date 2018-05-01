@@ -57,7 +57,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@git.sns.sky.com:team-meerkat/paddington.git"
+    "url": "git@github.com:LinkNYC/link-mobile-observations.git"
   },
   "browser": {
     "jsdom": false
